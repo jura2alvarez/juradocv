@@ -108,9 +108,22 @@ ul.timeline > li:before {
     background-color: #53c3f7 !important;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 </style>
+<!-- Estilo tarjeta TFG-->
+
+
+<!-- FIN Estilo tarjeta TFG-->
+
 <div class="jumbotron text-center">
     <h1>Curriculum</h1>
     <h5>Actualmente estudiante de Ingeniería Informática en Tecnologías Informáticas</h5>
@@ -154,11 +167,10 @@ ul.timeline > li:before {
         <div class="card-body ">
           • Carné de conducir B (2013)
         </div>
-    </div><!-- Fin Post It Otros -->
-  
-    </div> <!--Fin carta personal-->
+    </div>
+  </div> <!--Fin carta personal-->
     
-    <div class="col-sm-1"></div>
+  <div class="col-sm-1"></div>
 
     <div class="col-sm-8"> <!-- Formación -->
       <h1>Formación</h1><p>
@@ -184,7 +196,7 @@ ul.timeline > li:before {
           <img src="images/logos/us.png" class="mr-3 border" alt="..." style="width:80px;height:80px;">
           <div class="media-body">
             <h4 class="media-heading" style="display:inline">Grado en Ingeniería Informática - Tecnologías Informáticas </h4>
-            <h6 style="display: inline">   Actualmente cursando</h6>
+            <h6 style="display: inline">   Actualmente cursando (24 créditos restantes)</h6>
             <p>Universidad de Sevilla </p>
           </div>
         </li> <!-- Fin  TI-->
@@ -370,6 +382,7 @@ ul.timeline > li:before {
 <div><!-- calcula_fecha -->
 <script> 
     function calcula_fecha(fechaInicio,fechaFin,variable){
+      var res;
       var fechaDate = new Date(fechaInicio)
       if(fechaFin=="0"){
         var hoy = new Date()
@@ -394,7 +407,7 @@ ul.timeline > li:before {
 
       tiempoPasado = tiempoPasado - (meses * months);
       var dias = Math.floor(tiempoPasado / days)
-
+     
 
       if (anos==0){
         res= (` (${meses} meses)`)
@@ -416,7 +429,8 @@ ul.timeline > li:before {
 </div>
 <div> <!-- fechas -->
   <script>
-    calcula_fecha("2019,04,01","2019,06,0","GCIFuji")
+
+    calcula_fecha("2019,04,01","2019,06,1","GCIFuji")
     calcula_fecha("2019,06,01","0","MonFuji")
   </script>
 </div>
