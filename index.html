@@ -419,7 +419,9 @@ ul.timeline > li:before {
       if (anos==1){
         res= (`(${anos} año y ${meses} meses)`)
       }
-      if (anos>1){
+      if (anos>1 && meses<2){
+        res= (`(${anos} años y ${meses} mes)`)
+      } else{
         res= (`(${anos} años y ${meses} meses)`)
       }
       document.getElementById(variable).innerHTML = res
