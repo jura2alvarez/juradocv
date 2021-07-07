@@ -409,30 +409,23 @@ ul.timeline > li:before {
       var dias = Math.floor(tiempoPasado / days)
      
 
-      if (anos==0){
+      if (anos==0 && meses>1){
         res= (` (${meses} meses)`)
-      }
-      if (anos==0 && meses<2){
+      }else if (anos==0 && meses<2){
         res= (`(${meses} mes)`)
-      }
-
-      if (anos==1){
+      }else if (anos==1){
         res= (`(${anos} año y ${meses} meses)`)
-      }
-      if (anos>1 && meses<2){
+      }else if (anos>1 && meses<2){
         res= (`(${anos} años y ${meses} mes)`)
-      } else{
+      }else{
         res= (`(${anos} años y ${meses} meses)`)
       }
-      document.getElementById(variable).innerHTML = res
-    }
-     
+      document.getElementById(variable).innerHTML = res     
 </script>
 </div>
 <div> <!-- fechas -->
   <script>
-
-    calcula_fecha("2019,04,01","2019,06,1","GCIFuji")
+    calcula_fecha("2019,04,22","2019,06,1","GCIFuji")
     calcula_fecha("2019,06,01","0","MonFuji")
   </script>
 </div>
